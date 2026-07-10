@@ -1,23 +1,11 @@
 # DNS-Toolkit
 DNS-Toolkit An automated reconnaissance utility designed to uncover the origin IP addresses of domains protected by WAFs (Web Application Firewalls). It performs target resolution, direct leak checks, and aggressive subdomain fuzzing to identify potential origin exposures.
-# DNS-Toolkit 🛡️
 
-DNS-Toolkit is an automated reconnaissance utility designed to uncover **origin IP addresses** of domains often protected by WAFs (Web Application Firewalls) like Cloudflare. It combines network resolution, direct origin leak detection, and aggressive service probing (Web/SSH) to identify infrastructure exposures.
+DNS-Toolkit 🛡️
+DNS-Toolkit is an automated reconnaissance utility designed to uncover origin IP addresses of domains protected by WAFs (Web Application Firewalls). It combines network resolution, direct origin leak detection, and aggressive service probing to identify infrastructure exposures.
 
-## 🚀 Overview
-When a domain is protected by a WAF, the public-facing IP is usually a proxy. However, misconfigured subdomains (like `dev`, `mail`, or `vpn`) or direct origin responses often reveal the true server IP. This tool automates the discovery process.
-
-
-
-## 🛠 Prerequisites
-You will need `python3` and `pip` installed on your machine.
-- **Proxychains:** Highly recommended for anonymous scanning.
-- **Dependencies:** `requests` and `urllib3`.
-
-## 📦 Installation
-Follow these steps to set up the toolkit on your system:
-
-```bash
+📦 Installation
+Bash
 # 1. Update your package manager
 sudo apt update && sudo apt upgrade -y
 
@@ -31,21 +19,14 @@ cd DNS-Toolkit
 # 4. Install required Python libraries
 pip3 install requests urllib3
 
-# 5. (Optional) Configure Proxychains for anonymity
-# Edit your proxychains configuration file:
+# 5. Configure Proxychains for anonymity
 sudo nano /etc/proxychains.conf
-# Ensure you have your Tor or Proxy settings configured at the bottom.
 💻 Usage
-The tool is built to be modular and command-line friendly.
-
-Basic Scan
-Bash
-python3 dns.py [https://target-domain.com](https://target-domain.com)
 Anonymous Scan (Recommended)
-Always use proxychains4 to route your traffic through Tor or your chosen proxy layer:
+You should run the tool using proxychains4 to ensure your reconnaissance traffic is routed through your proxy configuration:
 
-Bash
-proxychains4 python3 dns.py [https://target-domain.com](https://target-domain.com)
+proxychains4 python3 dns.py https://target-domain.com
+
 🔍 How it Works
 Phase 1: DNS Resolution: Translates the target URL into its primary resolved IP.
 
