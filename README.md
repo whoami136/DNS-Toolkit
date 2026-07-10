@@ -5,7 +5,7 @@ DNS-Toolkit 🛡️
 DNS-Toolkit is an automated reconnaissance utility designed to uncover origin IP addresses of domains protected by WAFs (Web Application Firewalls). It combines network resolution, direct origin leak detection, and aggressive service probing to identify infrastructure exposures.
 
 📦 Installation
-Bash
+```bash
 # 1. Update your package manager
 sudo apt update && sudo apt upgrade -y
 
