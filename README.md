@@ -27,6 +27,8 @@ You should run the tool using proxychains4 to ensure your reconnaissance traffic
 
 proxychains4 python3 dns.py https://target-domain.com
 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+```bash
 🔍 How it Works
 Phase 1: DNS Resolution: Translates the target URL into its primary resolved IP.
 
