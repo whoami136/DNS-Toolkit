@@ -18,14 +18,7 @@ cd DNS-Toolkit
 
 # 4. Install required Python libraries
 pip3 install requests urllib3
-
-# 5. Configure Proxychains for anonymity
-sudo nano /etc/proxychains.conf
-💻 Usage
-Anonymous Scan (Recommended)
-You should run the tool using proxychains4 to ensure your reconnaissance traffic is routed through your proxy configuration:
-
-proxychains4 python3 dns.py https://target-domain.com
+python3 dns.py https://target-domain.com
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 ```bash
